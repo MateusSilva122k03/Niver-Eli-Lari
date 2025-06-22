@@ -1,0 +1,197 @@
+/* Resetando margens e paddings padrões */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+
+body {
+    background-color: #4169e1;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Título */
+
+h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Texto */
+
+p {
+    font-size: 1.3rem;
+    color: #f3f3f3;
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+/* Container (opcional para organizar as seções) */
+
+.container {
+    background: rgb(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    background: red;
+}
+
+.heart {
+    position: fixed;
+    top: -20px;
+    font-size: calc(15px + 20 * (1vw / 100));
+    pointer-events: none;
+    z-index: 9999;
+    animation: fall linear forwards;
+    opacity: 0.8;
+    transform: rotate(0deg);
+}
+
+
+
+@keyframes fall {
+    to {
+        transform: translate(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Player de música */
+
+.music-player {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.music-player button {
+    background-color: white;
+    color: red;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.music-player button:hover {
+    background-color: white;
+    color: #4169e1;
+    transform: scale(1.05);
+}
+
+/* Carta de Amor */
+
+.carta {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: 0px;
+}
+
+.carta button {
+    text-align: center;
+    background-color: white;
+    color: #4169e1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.carta button:hover {
+    background-color: white;
+    color: red;
+    transform: scale(1.05);
+}
+
+.conteudo-carta {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+    margin: 20px;
+    display: none;
+    animation: aparecer 0.5s ease forwards;
+}
+
+.conteudo-carta h2 {
+    color: #fff;
+    line-height: 1.6;
+}
+
+.conteudo-carta p {
+    text-align: justify;
+}
+
+.conteudo-carta button {
+    margin-top: 50px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container, .conteudo-carta {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+}
+
+/* Galeria */
+
+.galeria {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.galeria h2 {
+    color: #e0aaff;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
